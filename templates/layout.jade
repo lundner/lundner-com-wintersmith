@@ -1,0 +1,16 @@
+!!! 5
+html(lang='en')
+	head
+		block head
+		meta(charset='utf-8')
+		title
+			block title
+				= locals.name + ' - '
+		block stylesheets
+			link(rel="stylesheet", type="text/css", href="/styles/style.css")
+		block scripts
+			script(type="text/javascript", src="/scripts/main.js")
+	body
+		include navigation
+		block content
+		include footer

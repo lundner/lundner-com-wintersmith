@@ -1,0 +1,13 @@
+{
+	"locals": {
+	"url": "http://127.0.0.1:8080",
+	"name": "Lundner.com",
+	"description": "Webworking + Photography @Rostock"
+	},
+	"plugins": [
+		"./stylus-plugin.js"
+	],
+	"ignore": [
+		".DS_Store"
+	]
+}

@@ -1,0 +1,12 @@
+{
+	"name": "Lundner.com",
+	"description": "My personal website",
+	"private": true,
+	"version": "0.0.1",
+	"author": "Heiko Hoffmann",
+	"dependencies": {},
+	"devDependencies": {
+		"coffee-script": "*",
+		"stylus": "*"
+	}
+}
