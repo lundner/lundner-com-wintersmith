@@ -5,9 +5,10 @@
 	"description": "Webworking + Photography @Rostock"
 	},
 	"plugins": [
-		"./stylus-plugin.js"
+		"./plugins/coffee-plugin.js",
+		"./plugins/stylus-plugin.js"
 	],
 	"ignore": [
-		".DS_Store"
+    "*.DS_Store"
 	]
 }

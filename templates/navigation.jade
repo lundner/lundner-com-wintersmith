@@ -1,12 +1,10 @@
 nav
 	ul
-		li Hauptseite
-		li Wallpaper
-		li Kontakt &amp; Impressum
+		li
+			a(href="/", class=(page.metadata.active==="main"?"active":"")) Hauptseite
 		li 
-			img#twitter(src="/images/twitter.svg")
+			a(href="/blog/", class=(page.metadata.active==="blog"?"active":"")) Blog
 		li 
-			img#facebook(src="/images/facebook.svg")
+			a(href="/wallpaper/", class=(page.metadata.active==="wallpaper"?"active":"")) Wallpaper
 		li 
-			img#github(src="/images/github.svg")
-hr
+			a(href="/contact/", class=(page.metadata.active==="contact"?"active":"")) Kontakt

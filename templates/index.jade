@@ -2,4 +2,7 @@ extends layout
 
 block content
 	section
-		!= page.html
+		article
+			if page.metadata.title
+				h1.pagetitle #{page.metadata.title}
+			!= page.html

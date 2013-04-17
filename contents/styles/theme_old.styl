@@ -1,0 +1,128 @@
+green = RGBA(27.00, 99.00, 10.00, 1.00)
+lightblue = RGBA(133.00, 209.00, 235.00, 1.00)
+blue = RGBA(35.00, 118.00, 198.00, 1.00)
+
+body
+	color #000
+	font-family 'Helvetica'
+	font-weight lighter
+	line-height 1.5em
+	min-width 500px
+	margin 0
+	padding 0
+	background-size cover
+	background -webkit-gradient(linear, left top, right bottom, color-stop(0%,#fff), color-stop(100%,#eee))
+
+#page
+	width 100%
+	-webkit-animation fadein 2s
+	background-size cover
+	position relative
+	// text-align right
+	-webkit-animation fromRight 1s
+
+a
+	text-decoration none
+	color #000
+
+
+nav
+	font-size 17px
+	display inline-block
+	border-bottom 1px solid blue
+	ul
+		background-color RGBA(255,255,255, 1.0)
+		margin 0 auto
+		padding 10px
+		text-align right
+		#twitter, #facebook, #github
+			vertical-align text-bottom
+			width 26px
+			background-color #fff
+		li 
+			display inline-block
+			margin 5px 10px
+			a
+				padding 5px 10px
+				&:hover
+					color #fff
+					background blue
+					-webkit-transition all 0.2s 0.1s
+
+.header
+	width 2000px
+	font-size 100%
+	letter-spacing 10px
+	color blue
+
+.subheader
+	font-size 80px
+	letter-spacing 10px
+	color #999
+
+#rects
+	line-height 0
+	padding 20px 20px 0 20px
+	img
+		width 24%
+		margin 0.5%
+	// img
+	// 	background RGBA(255,255,255, 0.1)
+	// 	width 12.8%
+	// 	padding 0.5%
+	// 	margin 0.25%
+	// img
+	// 	background RGBA(200,200,200, 0.1)
+	// 	width 9.6%
+	// 	padding 0.5%
+	// 	margin 0.25%
+
+.left
+	width 40%
+	margin 0 5%
+	float left
+
+.right
+	width 43%
+	margin 0 0 0 5%
+	float left
+
+#findme
+	text-align center
+	color #fff
+	letter-spacing 20px
+	font-size 50px
+	background blue
+	// box-shadow inset 70px 10px 600px #000
+	margin 0 -1%
+	padding 20px
+	-webkit-transition all 1s 0.1s
+	span
+		opacity 0.4
+	img
+		vertical-align text-bottom
+		width 80px
+		opacity 0.4
+		-webkit-transition all 0.5s 0.1s
+		&:hover
+			opacity 1
+
+article
+	font-size 0.85em
+	text-align left
+	padding 30px
+	background RGBA(255,255,255, 0.9)
+
+.pagetitle
+	font-size 40px
+
+@-webkit-keyframes fadein 
+		from
+			opacity 0
+		to
+			opacity 1
+
+
+@-webkit-keyframes fromRight
+		from 
+			margin-left 5000px

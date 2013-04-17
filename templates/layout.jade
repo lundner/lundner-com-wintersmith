@@ -2,15 +2,20 @@
 html(lang='en')
 	head
 		block head
-		meta(charset='utf-8')
+		meta(name="viewport", content="initial-scale=1.0, user-scalable=no")
+		meta(name="apple-mobile-web-app-capable", content="yes")
+		meta(charset="utf-8")
 		title
 			block title
 				= locals.name + ' - '
 		block stylesheets
-			link(rel="stylesheet", type="text/css", href="/styles/style.css")
+			link(rel="stylesheet", type="text/css", href="/styles/theme.css")
 		block scripts
 			script(type="text/javascript", src="/scripts/main.js")
-	body
+	body(onload="loaded()")
+		header
+			h1 Lundner.com
 		include navigation
-		block content
+		#page
+			block content
 		include footer

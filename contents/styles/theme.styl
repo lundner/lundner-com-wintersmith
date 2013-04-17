@@ -1,0 +1,135 @@
+lightblue = RGBA(0, 173, 239, 1.0)
+lightgray = RGBA(240,240,240, 1.0)
+blue = RGBA(35.00, 118.00, 198.00, 1.00)
+dark = RGBA(43.00, 43.00, 43.00, 1.00)
+
+body
+	color #000
+	font-family 'Helvetica', sans-serif
+	font-weight lighter
+	line-height 1.5em
+	margin 0
+	padding 0
+	background-color white
+	-webkit-animation fadein 2s
+
+a
+	text-decoration none
+	color lightblue
+	&:hover
+		color blue
+
+header
+	position absolute
+	right 0
+	padding 60px 20px 20px 20px
+	margin 0 30px 0 0
+	width 20%
+	text-align center
+	background lightblue
+	color white
+	letter-spacing 1px
+	text-transform uppercase
+	z-index 1
+	h1
+		font-size 130%
+		font-weight 100
+	// -webkit-transition all 0.5s 
+	// -webkit-animation slidedown 1s
+
+nav
+	ul
+		margin 0 25px
+		padding 0
+		li
+			display inline-block
+			margin 10px 30px 10px 0
+			color lightblue
+			text-transform uppercase
+			font-weight 500
+			letter-spacing 2px
+			font-size 15px
+			a 
+				padding 10px
+				&.active
+					background lightblue
+					color white
+					&:after
+						content ""
+						display block
+						position absolute
+						margin -5px 0 0 0 
+						width: 0; 
+						height: 0; 
+						border-left: 20px solid transparent;
+						border-right: 20px solid transparent;
+						border-top: 20px solid lightblue
+footer
+	width 95%
+	height 80px
+	margin 25px 0
+	position fixed
+	bottom 0
+	img.social
+		max-width 20%
+		height 100%
+		float right
+		opacity 0
+		-webkit-transition all 0.2s linear 0.2s
+	img.me
+		width 100px
+		margin -15px -50px 0 10px
+		float right
+		border 1px solid #222
+		border-radius 50%
+	&.active
+	&:hover
+		img.social
+			opacity 1
+		background dark
+	-webkit-transition all 0.2s linear
+
+#page
+	width 65%
+	margin 5px 25px 125px 25px
+	padding 20px
+	min-height 300px
+	background lightgray
+	// -webkit-transition all 0.5s 
+
+@media (max-width: 820px)
+	header
+		position relative
+		width auto
+		margin 0
+		// -webkit-animation none
+	nav
+		ul
+			margin 0
+			li
+				margin 5px
+				a.active
+					&:after
+						border none
+	footer
+		position relative
+		background dark
+		width 90%
+		img.social
+			opacity 1
+
+	#page
+		width 90%
+		margin 3%
+		padding 2%
+
+.clear 
+	clear both
+
+@-webkit-keyframes fadein 
+	from
+		opacity 0
+
+@-webkit-keyframes slidedown
+	from
+		margin-top -600px
