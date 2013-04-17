@@ -1,20 +1,28 @@
 # utils 
 delay = (ms, func) -> setTimeout func, ms
 
+lc = {}
+
+lc.redrawFooter = () ->
+	scrollTop = document.body.scrollTop || document.documentElement.scrollTop
+	if scrollTop + window.innerHeight >= lc.body.offsetHeight
+		lc.footer.className = "active"
+	else
+		lc.footer.className = ""
 
 # onload event
 window.loaded = () ->
-	body = document.getElementsByTagName('body').item(0)
-	page = document.getElementById('page')
-	footer = document.getElementsByTagName('footer').item(0)
-
-
-	if body.scrollTop + window.innerHeight >= body.offsetHeight
-		footer.className = "active"
+	lc.body = document.getElementsByTagName('body').item(0)
+	lc.page = document.getElementById('page')
+	lc.footer = document.getElementsByTagName('footer').item(0)
+	
+	lc.redrawFooter()
 	window.addEventListener "scroll", (evt) ->
-		if body.scrollTop + window.innerHeight >= body.offsetHeight
-			footer.className = "active"
-		else
-			footer.className = ""
-	footer.addEventListener "click", (evt) ->
+		# TODO set a timeout
+		lc.redrawFooter()
+
+	window.addEventListener "resize", (evt) ->
+		lc.redrawFooter()
+
+	lc.footer.addEventListener "click", (evt) ->
 		@className = if @className.length == 0 then "active" else ""

@@ -1,8 +1,9 @@
 extends layout
 
 block content
-	section
-		article
-			if page.metadata.title
-				h1.pagetitle #{page.metadata.title}
-			!= page.html
+	#page
+		section
+			article
+				if page.metadata.title
+					h1.pagetitle #{page.metadata.title}
+				!= page.html

@@ -8,14 +8,16 @@ html(lang='en')
 		title
 			block title
 				= locals.name + ' - '
+		link(rel="stylesheet", type="text/css", href="/styles/theme.css")
 		block stylesheets
-			link(rel="stylesheet", type="text/css", href="/styles/theme.css")
+		script(type="text/javascript", src="/scripts/main.js")
 		block scripts
-			script(type="text/javascript", src="/scripts/main.js")
 	body(onload="loaded()")
 		header
+			img(src="/images/tablet.svg")
+			img(src="/images/camera.svg")
+			img(src="/images/random.svg")
 			h1 Lundner.com
 		include navigation
-		#page
-			block content
+		block content
 		include footer
