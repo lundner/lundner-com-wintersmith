@@ -1,0 +1,11 @@
+extends layout
+
+block stylesheets
+	link(rel="stylesheet", type="text/css", href="/styles/me.css")
+
+block content
+	#about
+		img(src="/images/lundner_full.jpg")
+	#about2
+		!= page.html
+	.clear

@@ -1,0 +1,21 @@
+{
+	"active": "blog",
+	"template": "articles.jade",
+	"articles": [
+		{
+			"title": "Schnee Schnee Katze",
+			"href": "/blog/2013/04/schnee-schnee-katze/",
+			"image": "/blog/2013/04/schnee-schnee-katze/rect1.jpg",
+			"tag": "Photography"
+		},
+		{
+			"title": "Selbstportrait – Nikkor AF-S DX 35mm f1.8",
+			"href": "/blog/2013/04/selbstportrait-nikkor-af-s-dx-35mm-f18/",
+			"image": "/blog/2013/04/selbstportrait-nikkor-af-s-dx-35mm-f18/rect5.jpg"
+		},
+		{
+			"title": "Gemeinsame Jade-Templates für Client und Express Node-Server",
+			"href": "/blog/2013/04/gemeinsame-jade-templates-fuer-client-und-express-node-server/"
+		}
+	]
+}

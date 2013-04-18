@@ -1,8 +1,8 @@
 {
 	"locals": {
-	"url": "http://127.0.0.1:8080",
-	"name": "Lundner.com",
-	"description": "Webworking + Photography @Rostock"
+		"url": "http://127.0.0.1:8080",
+		"name": "Lundner.com",
+		"description": "Webworking + Photography @Rostock"
 	},
 	"plugins": [
 		"./plugins/coffee-plugin.js",

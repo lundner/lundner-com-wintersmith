@@ -1,0 +1,17 @@
+extends layout
+
+block stylesheets
+	link(rel="stylesheet", type="text/css", href="/styles/articles.css")
+
+block content
+	#hint Alte Artikel gibt es auf 
+		a(href="http://old.lundner.com") old.lundner.com
+	#articles
+		ul
+			each article in page.metadata.articles
+				li
+					if article.image
+						img(src="#{article.image}")
+					h1
+						a(href="#{article.href}") #{article.title}
+	.clear

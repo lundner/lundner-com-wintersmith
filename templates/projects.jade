@@ -1,0 +1,7 @@
+extends layout
+
+block content
+	#page
+		if page.metadata.title
+			h1.pagetitle #{page.metadata.title}
+		!= page.html
