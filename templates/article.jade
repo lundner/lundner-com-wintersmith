@@ -4,5 +4,7 @@ block content
 	#page
 		section
 			article
-				h1 = page.metadata.title
+				if page.metadata.title
+					h1 #{page.metadata.title}
+					h2 #{page.metadata.date}
 				!= page.html

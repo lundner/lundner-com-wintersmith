@@ -1,8 +1,6 @@
 ---
 title: Schnee Schnee Katze
-date: 2012-12-12 12:12
+date: 2013-03-19 12:00
 author: Heiko Hoffmann
 template: article.jade
 ----
-
-![Katze](rect1.jpg)

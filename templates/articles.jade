@@ -3,15 +3,28 @@ extends layout
 block stylesheets
 	link(rel="stylesheet", type="text/css", href="/styles/articles.css")
 
+
 block content
+	- var articles = _.chain(contents.blog._.directories).map(function(item) {
+	- 	return item._.directories.map(function(item) {
+	- 		return item._.directories.map(function(item) {
+	- 			return item['index.md']
+	-			})
+	-		})
+	- }).flatten().sortBy(function(item) {
+	- 	return -item.date
+	- }).value()
+
 	#hint Alte Artikel gibt es auf 
 		a(href="http://old.lundner.com") old.lundner.com
 	#articles
 		ul
-			each article in page.metadata.articles
+			each article in articles
 				li
 					if article.image
 						img(src="#{article.image}")
 					h1
-						a(href="#{article.href}") #{article.title}
+						a(href="#{article.url}") #{article.title}
 	.clear
+
+
