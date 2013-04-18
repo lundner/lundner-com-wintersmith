@@ -1,10 +1,6 @@
 extends layout
 
-block stylesheets
-	link(rel="stylesheet", type="text/css", href="/styles/articles.css")
-
-
-block content
+block init
 	- var articles = _.chain(contents.blog._.directories).map(function(item) {
 	- 	return item._.directories.map(function(item) {
 	- 		return item._.directories.map(function(item) {
@@ -15,6 +11,11 @@ block content
 	- 	return -item.date
 	- }).value()
 
+block stylesheets
+	link(rel="stylesheet", type="text/css", href="/styles/articles.css")
+
+
+block content
 	#hint Alte Artikel gibt es auf 
 		a(href="http://old.lundner.com") old.lundner.com
 	#articles

@@ -1,13 +1,10 @@
 ---
-title: A very nice post
+title: Kontakt & Impressum
 date: 2012-12-12 12:12
 author: Heiko Hoffmann
 active: contact
-template: article.jade
+template: contact.jade
 ----
-
-# Kontakt & Impressum
-
 Verantwortlicher dieser Seite:
 
 Heiko Hoffmann  
